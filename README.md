@@ -1,5 +1,7 @@
 # IMovies — Online Movie Ticket Booking System
+## Live Demo
 
+[Click here to view IMovies](https://i-movies-rose.vercel.app/)
 A full-stack cinema ticket booking project built with **React, Bootstrap, Node.js, Express, MongoDB, and JWT**. It includes a movie catalogue, search and genre filters, showtime selection, live seat availability, secure account registration/login, booking history/cancellation, and an admin dashboard for movies and shows.
 
 > This is an educational demo. It does not process real payments. Posters are remote sample images and need an internet connection to display.
