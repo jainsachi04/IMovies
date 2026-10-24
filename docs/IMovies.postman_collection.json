@@ -1,0 +1,13 @@
+{
+  "info": {"name": "IMovies API", "description": "Starter collection for the IMovies Express API", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"},
+  "variable": [{"key":"baseUrl","value":"http://localhost:5000/api"},{"key":"token","value":"PASTE_JWT_TOKEN_HERE"},{"key":"showId","value":"PASTE_SHOW_ID_HERE"}],
+  "item": [
+    {"name":"Health check","request":{"method":"GET","url":"{{baseUrl}}/health"}},
+    {"name":"List movies","request":{"method":"GET","url":"{{baseUrl}}/movies"}},
+    {"name":"List shows","request":{"method":"GET","url":"{{baseUrl}}/shows"}},
+    {"name":"Register","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"name\": \"Test User\",\n  \"email\": \"test@example.com\",\n  \"password\": \"StrongPass123\"\n}"},"url":"{{baseUrl}}/auth/register"}},
+    {"name":"Login","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"email\": \"admin@imovies.local\",\n  \"password\": \"Admin@12345\"\n}"},"url":"{{baseUrl}}/auth/login"}},
+    {"name":"Create booking","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"},{"key":"Authorization","value":"Bearer {{token}}"}],"body":{"mode":"raw","raw":"{\n  \"showId\": \"{{showId}}\",\n  \"seats\": [\"A1\", \"A2\"]\n}"},"url":"{{baseUrl}}/bookings"}},
+    {"name":"My bookings","request":{"method":"GET","header":[{"key":"Authorization","value":"Bearer {{token}}"}],"url":"{{baseUrl}}/bookings/mine"}}
+  ]
+}
