@@ -207,3 +207,5 @@ IMovies/
 - This starter project does not include production rate limiting, email verification, password reset, or payment reconciliation. Add these before public deployment.
 - Cancelling a booking releases seats in MongoDB; for production, consider cancellation windows and audit logging.
 - MongoDB should be secured with authentication and network restrictions in a deployed environment.
+# IMovies
+Online Movie Ticket Booking System
